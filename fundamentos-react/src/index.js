@@ -1,18 +1,14 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Primeiro from './components/basicos/Primeiro';
 import Propriedade from './components/basicos/Propriedade';
 import reportWebVitals from './reportWebVitals';
+import App from './App';
 
 ReactDOM.render(
-  <Fragment>
-    <Primeiro />
-    <Propriedade 
-    titulo="Estou aprendendo react"
-    descricao="Espero que você esteja tão empolgado quanto eu estou :)"/>
-  </Fragment>,
-  document.getElementById('root')
+    <App/>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
