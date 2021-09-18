@@ -6,13 +6,17 @@ import Propriedade from './components/basicos/Propriedade';
 import Aleatorio from './components/basicos/Aleatorio'
 import Familia from "./components/basicos/Familia";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
+import Notas from './components/repeticao/Notas'
 
-import Card from './layout/Card.jsx'
+import Card from './components/layout/Card.jsx'
 export default _ => {
     return (
         <div className="App">
           <h1>Fundamentos do React</h1>
           <div className="Cards">
+              <Card title="#05 - Nota de alunos" color="#F2E394">
+                  <Notas></Notas>
+              </Card>
               <Card title="#04 - Componente com filhos" color="#CD5C5C">
                   <Familia sobrenome="Ferreira">
                       <FamiliaMembro nome="Ana"/>
