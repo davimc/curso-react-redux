@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Primeiro from './components/basicos/Primeiro';
-import Propriedade from './components/basicos/Propriedade';
+
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 
