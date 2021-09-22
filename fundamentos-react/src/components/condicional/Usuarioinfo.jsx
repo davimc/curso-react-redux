@@ -8,7 +8,6 @@ export default props => {
             <If test={usuario && usuario.nome}>
                 <span>Olá! Seja bem-vindo <strong>{usuario.nome}</strong>!</span>
                 <Else>
-                    {console.log("entrei")}
                     <span>Olá! Seja bem-vindo <strong>Amigão</strong>!</span>
                 </Else>
             </If>
