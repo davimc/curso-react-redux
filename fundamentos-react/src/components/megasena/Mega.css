@@ -1,0 +1,21 @@
+.MegaSena {
+    font-size: 1.4rem;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.MegaSena #Numeros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 0 10px 0;
+}
+
+.MegaSena .Numero {
+    border: 1px solid black;
+    margin: 0;
+    background-color: #6b6a6a;
+    color: #fff;
+}
