@@ -1,0 +1,23 @@
+.display {
+    grid-column: span 4;
+    background-color: #0004;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right:20px;
+    
+    overflow:hidden;
+}
+.display .previous {
+    font-size: 1.2rem;
+    margin-right: 0;
+    padding-right: 0;
+    margin-bottom: 0;
+    color: #f0f0f0c0;
+}
+.display .current {
+    font-size: 2.4rem;
+    
+}
