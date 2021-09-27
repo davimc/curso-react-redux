@@ -1,0 +1,9 @@
+.calculadora { 
+    width: 320px;
+    height: 450px;
+    background-color: red;
+
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    grid-template-rows: 48px 48px 48px 48px 48px;
+}
