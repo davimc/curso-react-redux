@@ -11,7 +11,7 @@ const UseState = (props) => {
                 title="Hook UseState"
                 subtitle="Estado em componentes funcionais!"
             />
-            <SectionTitle title="exercício #01" />
+            <SectionTitle title="Exercício #01" />
             <div className="center">
                 <span className="text">{value}</span>
                 <div>
@@ -19,8 +19,13 @@ const UseState = (props) => {
                     <button className="btn" onClick={() => setValue(value--)}>-</button>
                 </div>
             </div>
-            <SectionTitle title="exercício #02"/>
-                <input type="text" className="input" value={name} onChange={event => setName(event.target.value)}/>
+            <SectionTitle title="Exercício #02"/>
+                <input 
+                type="text" 
+                className="input" 
+                value={name} 
+                onChange={event => setName(event.target.value)}/>
+
         </div>
     )
 }
