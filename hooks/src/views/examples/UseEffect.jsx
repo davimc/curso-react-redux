@@ -5,7 +5,7 @@ import SectionTitle from '../../components/layout/SectionTitle'
 const UseEffect = (props) => {
     const [number, setNumber] = useState(1);
     const [fatorial, setFatorial] = useState(1);
-    const [par, setPar] = useState(Ímpar);
+    const [status, setStatus] = useState('Ímpar');
 
     function calcFatorial(num) {
         const n = parseInt(num)
@@ -20,6 +20,9 @@ const UseEffect = (props) => {
         if (fatorial > 1000000)
             document.title = ('Eita!!!');
     }, [fatorial])
+    useEffect(() => {
+        setStatus(number%2===0? 'Par':'Ímpar')
+    }, [number]);
     return (
         <div className="UseEffect">
             <PageTitle
@@ -33,6 +36,13 @@ const UseEffect = (props) => {
                     <span className="text red">{fatorial === -1 ? 'Não existe' : fatorial}</span>
                 </div>
                 <input type="number" className="input" value={number} onChange={event => setNumber(event.target.value)} />
+            </div>
+            <SectionTitle title="Exercício #02" />
+            <div className="center">
+                <div>
+                    <span className="text">Tipo:</span>
+                    <span className="text red">{status}</span>
+                </div>
             </div>
         </div>
 
