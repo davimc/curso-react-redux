@@ -1,9 +1,6 @@
 import React from 'react'
 
 const UseCallbackButton = props => {
-  {
-    console.log('render')
-  }
   return (
     <div className="center">
       <button className="btn" onClick={() => props.inc(6)}>
