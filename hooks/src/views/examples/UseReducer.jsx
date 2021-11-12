@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
 const UseReducer = props => {
@@ -13,12 +13,25 @@ const UseReducer = props => {
         return { ...state, number: state.number + 2 }
       case 'login':
         return { ...state, user: { name: action.payload } }
+      case 'numberMultiply7':
+        return { ...state, number: state.number * 7 }
+      case 'numberParseInt':
+        return { ...state, number: parseInt(state.number) }
+      case 'numberDivide25':
+        return { ...state, number: state.number / 25 }
+      case 'numberAddN':
+        return { ...state, number: state.number + action.n }
       default:
         return state
     }
   }
 
   const [state, dispatch] = useReducer(reducer, initialState)
+  const [n, setN] = useState()
+
+  useEffect(() => {
+    dispatch({ type: 'numberParseInt' })
+  }, [state.number])
   return (
     <div className="UseReducer">
       <PageTitle
@@ -45,6 +58,32 @@ const UseReducer = props => {
             onClick={() => dispatch({ type: 'numberAdd2' })}
           >
             +2
+          </button>
+          <button
+            className="btn"
+            onClick={() => dispatch({ type: 'numberMultiply7' })}
+          >
+            x7
+          </button>
+          <button
+            className="btn"
+            onClick={() => dispatch({ type: 'numberDivide25' })}
+          >
+            /25
+          </button>
+        </div>
+        <div>
+          <input
+            type="number"
+            value={n}
+            onChange={event => setN(+event.target.value)}
+            className="input"
+          />
+          <button
+            className="btn"
+            onClick={() => dispatch({ type: 'numberAddN', n: n })}
+          >
+            +
           </button>
         </div>
       </div>
